@@ -1,0 +1,183 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#topMenu{
+    width: 60%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    border-bottom: solid black 1px;
+    margin-top: 50px;
+}
+#bamaIconDiv{
+    float: left;
+}
+#bamaIcon{
+    width: 100px;
+}
+#loginDiv{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+}
+#loginDiv div{
+    height: 30px;
+}
+#loginDiv a{
+    text-decoration: none;
+    color: black;
+    padding: 6px;
+}
+#free{
+    font-size: 10px;
+    color: #c411ac;
+    font-weight: bold;
+}
+#searchInput{
+    width: 300px;
+    height: 35px;
+    background-color: #ececec;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #99ebff;
+    margin-top: 45px;
+}
+#littleMenu{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 250px;
+    margin-top: 55px;
+}
+ul{
+    list-style-type: none;
+
+}
+#littleMenu a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    height: 35px;
+}
+#underMenu{
+    display: none;
+    position: relative;
+    left: 45px;
+    height: 220px;
+    z-index: 2;
+}
+#underMenu a,#sunderMenu a, #tunderMenu a{
+    display: block;
+}
+#underMenu li{
+    width: 180px;
+    height: 35px;
+    background-color: #e0e0e0;
+    padding-right: 5px;
+}
+#khodro{
+    width: 50px;
+}
+#sunderMenu{
+    display: none;
+    position: relative;
+    left: 45px;
+    height: 120px;
+    z-index: 2;
+}
+#littleMenuMotorSyclet{
+    width: 95px;
+
+}
+#sunderMenu li{
+    width: 200px;
+    height: 35px;
+    background-color: #e0e0e0;
+    padding-right: 5px;
+}
+#tunderMenu{
+    display: none;
+    position: relative;
+    left: 45px;
+    height: 150px;
+    z-index: 2;
+}
+#tunderMenu li{
+    width: 200px;
+    height: 35px;
+    background-color: #e0e0e0;
+    padding-right: 5px;
+}
+#littleMenuBama{
+    width: 35px;
+}
+#underMenu a,#sunderMenu a,#tunderMenu a{
+    font-weight: 300;
+}
+#littleMenu>li, #littleMenu>span{
+    padding: 5px;
+}
+#xIcon{
+    height: 35px;
+    margin-top: 45px;
+    display: none;
+}
+#middleMenu{
+    width: 60%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+#rightMenu{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#rightMenu li{
+    height: 100px;
+    width: 150px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+#uRightMenu4{
+    border-bottom: 0px !important;
+}
+#rightMenu a{
+    text-decoration: none;
+    color: black;
+    display: block ;
+    width: 150px;
+    height: 100px;
+    padding-top: 35px;
+}
+#xIcon2, #xIcon3, #xIcon4, #xIcon5{
+    width: 15px;
+    float: left;
+    margin-top: 10px;
+    filter: opacity(30%);
+    display: none;
+}
+#animationDiv{
+    width: 76%;
+    height: 90%;
+    background-color: yellow;
+}
+#rightMenu li a.active{
+    color: #c411ac;
+    font-weight: bold;
+}

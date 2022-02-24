@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/homeStyle.css">
+    <script src="js/homeJs.js"></script>
+    <title>باما، میانبر به بازار خودرو|bama</title>
+</head>
+<body>
+    <div id="topMenu">
+        <a href="#"><img src="xIcon.png" id="xIcon" onclick="clickX()"/></a>
+        <ul id="littleMenu">
+            <li onmouseover="mouseOnUnderMenu('underMenu','khodro')" onmouseout="mouseOutUnderMenu('underMenu','khodro')" id="khodro" title="خودرو"><a href="#">خودرو</a>
+                <ul id="underMenu">
+                    <li id="underMenu1" onmouseover="mouseOnLi('underMenu1')" onmouseout="mouseOutLi('underMenu1')"><a href="#">خرید خودرو</a></li>
+                    <li id="underMenu2" onmouseover="mouseOnLi('underMenu2')" onmouseout="mouseOutLi('underMenu2')"><a href="#">ثبت آگهی<span id="free">رایگان</span></a></li>
+                    <li id="underMenu3" onmouseover="mouseOnLi('underMenu3')" onmouseout="mouseOutLi('underMenu3')"><a href="#">قیمت روز خودرو</a></li>
+                    <li id="underMenu4" onmouseover="mouseOnLi('underMenu4')" onmouseout="mouseOutLi('underMenu4')"><a href="#">اخبار خودرو</a></li>
+                    <li id="underMenu5" onmouseover="mouseOnLi('underMenu5')" onmouseout="mouseOutLi('underMenu5')"><a href="#">مشخصات فنی خودرو</a></li>
+                    <li id="underMenu6" onmouseover="mouseOnLi('underMenu6')" onmouseout="mouseOutLi('underMenu6')"><a href="#">گوش به زنگ خودرو</a></li>
+                    <li id="underMenu7" onmouseover="mouseOnLi('underMenu7')" onmouseout="mouseOutLi('underMenu7')"><a href="#">کمپانی های خودرو</a></li>
+                </ul>
+            </li>
+            <span id="littleMenuLine">|</span>
+            <li id="littleMenuMotorSyclet" onmouseover="mouseOnUnderMenu('sunderMenu','littleMenuMotorSyclet')" onmouseout="mouseOutUnderMenu('sunderMenu','littleMenuMotorSyclet')" title="موتورسیکلت"><a href="#">موتورسیکلت</a>
+                <ul id="sunderMenu">
+                    <li id="underMenu8" onmouseover="mouseOnLi('underMenu8')" onmouseout="mouseOutLi('underMenu8')"><a href="#">خرید موتورسیکلت</a></li>
+                    <li id="underMenu9" onmouseover="mouseOnLi('underMenu9')" onmouseout="mouseOutLi('underMenu9')"><a href="#">ثبت آگهی موتورسیکلت<span id="free">رایگان</span></a></li>
+                    <li id="underMenu10" onmouseover="mouseOnLi('underMenu10')" onmouseout="mouseOutLi('underMenu10')"><a href="#">اخبار موتورسیکلت</a></li>
+                    <li id="underMenu11" onmouseover="mouseOnLi('underMenu11')" onmouseout="mouseOutLi('underMenu11')"><a href="#">گوش به زنگ موتورسیکلت</a></li>
+                </ul>
+            </li>    
+            <span id="littleMenuLine2">|</span>
+            <li id="littleMenuBama" onmouseover="mouseOnUnderMenu('tunderMenu','littleMenuBama')" onmouseout="mouseOutUnderMenu('tunderMenu','littleMenuBama')" title="باما"><a href="#">باما</a>
+                <ul id="tunderMenu" >
+                    <li id="underMenu12" onmouseover="mouseOnLi('underMenu12')" onmouseout="mouseOutLi('underMenu12')"><a href="#">ثبت نام نمایشگاه</a></li>
+                    <li id="underMenu13" onmouseover="mouseOnLi('underMenu13')" onmouseout="mouseOutLi('underMenu13')"><a href="#">تماس با ما</a></li>
+                    <li id="underMenu14" onmouseover="mouseOnLi('underMenu14')" onmouseout="mouseOutLi('underMenu14')"><a href="#">تبلیغات شرکت ها</a></li>
+                    <li id="underMenu15" onmouseover="mouseOnLi('underMenu15')" onmouseout="mouseOutLi('underMenu15')"><a href="#">قوانین سایت</a></li>
+                    <li id="underMenu16" onmouseover="mouseOnLi('underMenu16')" onmouseout="mouseOutLi('underMenu16')"><a href="#">فرصت های شغلی</a></li>
+                    <li id="underMenu17" onmouseover="mouseOnLi('underMenu17')" onmouseout="mouseOutLi('underMenu17')"><a href="#">درباره ما</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div id="searchDiv">
+            <input type="search" placeholder="جستجو" id="searchInput" onclick="changePage()">
+        </div>
+        <div id="loginDiv">
+            <div id="logIn" onmouseover="mouseOnDiv('logIn')" onmouseout="mouseOutDiv('logIn')" title="ورود"><a href="#">ورود</a></div>
+            <span>|</span>
+            <div id="newAdvertise" onmouseover="mouseOnDiv('newAdvertise')" onmouseout="mouseOutDiv('newAdvertise')" title="ثبت آگهی"><a href="#">ثبت آگهی <span id="free">رایگان</span></a></div>
+        </div>
+        <div id="bamaIconDiv">
+            <a href="#"><img src="bamaIcon.png" id="bamaIcon" title="bama"/></a>
+        </div>
+    </div>
+    <div id="middleMenu">
+        <ul id="rightMenu">
+            <li id="uRightMenu1" onmouseover="changeMenuColor('aRightMenu1')" onmouseout="changeMenuColor2('aRightMenu1')"><a href="#" id="aRightMenu1" class="aaRightMenu aRightMenu1" onclick="liClicked('aRightMenu1')">میانبر</a><a href="#"><img src="xIcon2.png" id="xIcon2" onmouseover="changeOpacity('xIcon2')" onmouseout="changeOpacity2('xIcon2')"></a></li>
+            <li id="uRightMenu2" onmouseover="changeMenuColor('aRightMenu2')" onmouseout="changeMenuColor2('aRightMenu2')"><a href="#" id="aRightMenu2" class="aaRightMenu aRightMenu2"  onclick="liClicked('aRightMenu2')">برند</a><a href="#"><img src="xIcon2.png" id="xIcon3" onmouseover="changeOpacity('xIcon3')" onmouseout="changeOpacity2('xIcon3')"></a></li>
+            <li id="uRightMenu3" onmouseover="changeMenuColor('aRightMenu3')" onmouseout="changeMenuColor2('aRightMenu3')"><a href="#" id="aRightMenu3" class="aaRightMenu aRightMenu3"  onclick="liClicked('aRightMenu3')">شاسی</a><a href="#"><img src="xIcon2.png" id="xIcon4" onmouseover="changeOpacity('xIcon4')" onmouseout="changeOpacity2('xIcon4')"></a></li>
+            <li id="uRightMenu4" onmouseover="changeMenuColor('aRightMenu4')" onmouseout="changeMenuColor2('aRightMenu4')"><a href="#" id="aRightMenu4" class="aaRightMenu aRightMenu4"  onclick="liClicked('aRightMenu4')">قیمت</a><a href="#"><img src="xIcon2.png" id="xIcon5" onmouseover="changeOpacity('xIcon5')" onmouseout="changeOpacity2('xIcon5')"></a></li>
+        </ul>
+        <div id="animationDiv">
+
+        </div>
+    </div>
+</body>
+</html>
