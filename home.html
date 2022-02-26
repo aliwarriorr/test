@@ -58,13 +58,60 @@
     </div>
     <div id="middleMenu">
         <ul id="rightMenu">
-            <li id="uRightMenu1" onmouseover="changeMenuColor('aRightMenu1')" onmouseout="changeMenuColor2('aRightMenu1')"><a href="#" id="aRightMenu1" class="aaRightMenu aRightMenu1" onclick="liClicked('aRightMenu1')">میانبر</a><a href="#"><img src="xIcon2.png" id="xIcon2" onmouseover="changeOpacity('xIcon2')" onmouseout="changeOpacity2('xIcon2')"></a></li>
-            <li id="uRightMenu2" onmouseover="changeMenuColor('aRightMenu2')" onmouseout="changeMenuColor2('aRightMenu2')"><a href="#" id="aRightMenu2" class="aaRightMenu aRightMenu2"  onclick="liClicked('aRightMenu2')">برند</a><a href="#"><img src="xIcon2.png" id="xIcon3" onmouseover="changeOpacity('xIcon3')" onmouseout="changeOpacity2('xIcon3')"></a></li>
-            <li id="uRightMenu3" onmouseover="changeMenuColor('aRightMenu3')" onmouseout="changeMenuColor2('aRightMenu3')"><a href="#" id="aRightMenu3" class="aaRightMenu aRightMenu3"  onclick="liClicked('aRightMenu3')">شاسی</a><a href="#"><img src="xIcon2.png" id="xIcon4" onmouseover="changeOpacity('xIcon4')" onmouseout="changeOpacity2('xIcon4')"></a></li>
-            <li id="uRightMenu4" onmouseover="changeMenuColor('aRightMenu4')" onmouseout="changeMenuColor2('aRightMenu4')"><a href="#" id="aRightMenu4" class="aaRightMenu aRightMenu4"  onclick="liClicked('aRightMenu4')">قیمت</a><a href="#"><img src="xIcon2.png" id="xIcon5" onmouseover="changeOpacity('xIcon5')" onmouseout="changeOpacity2('xIcon5')"></a></li>
+            <li id="uRightMenu1" ><a href="#" id="aRightMenu1" class="aaRightMenu aRightMenu1 repla" onmouseover="changeMenuColor('aRightMenu1')" onmouseout="changeMenuColor2('aRightMenu1')" onclick="liClicked1('aRightMenu1','xIcon2')">میانبر</a><a href="#"><img src="xIcon2.png" id="xIcon2" class="xIcons" onmouseover="changeOpacity('xIcon2')" onmouseout="changeOpacity2('xIcon2')" onclick="closeAllMenues()"></a></li>
+            <li id="uRightMenu2" ><a href="#" id="aRightMenu2" class="aaRightMenu aRightMenu2 repla" onmouseover="changeMenuColor('aRightMenu2')" onmouseout="changeMenuColor2('aRightMenu2')" onclick="liClicked2('aRightMenu2','xIcon3')">برند</a><a href="#"><img src="xIcon2.png" id="xIcon3" class="xIcons" onmouseover="changeOpacity('xIcon3')" onmouseout="changeOpacity2('xIcon3')" onclick="closeAllMenues()"></a></li>
+            <li id="uRightMenu3" ><a href="#" id="aRightMenu3" class="aaRightMenu aRightMenu3 repla" onmouseover="changeMenuColor('aRightMenu3')" onmouseout="changeMenuColor2('aRightMenu3')" onclick="liClicked3('aRightMenu3','xIcon4')">شاسی</a><a href="#"><img src="xIcon2.png" id="xIcon4" class="xIcons" onmouseover="changeOpacity('xIcon4')" onmouseout="changeOpacity2('xIcon4')" onclick="closeAllMenues()"></a></li>
+            <li id="uRightMenu4" ><a href="#" id="aRightMenu4" class="aaRightMenu aRightMenu4 repla" onmouseover="changeMenuColor('aRightMenu4')" onmouseout="changeMenuColor2('aRightMenu4')" onclick="liClicked4('aRightMenu4','xIcon5')">قیمت</a><a href="#"><img src="xIcon2.png" id="xIcon5" class="xIcons" onmouseover="changeOpacity('xIcon5')" onmouseout="changeOpacity2('xIcon5')" onclick="closeAllMenues()"></a></li>
         </ul>
-        <div id="animationDiv">
-
+        <div id="selectedMenu1Div" class="underMenuOfRhigtMenu sliders">
+             <div id="menu1Div1">از میانبر های زیر انتخاب کنید:</div>
+             <ul class="slide" id="menu1Slide1">
+                <li id="underMenu1Slide1Div1" onmouseover="underMenuSlideHover('underMenu1Slide1Div1')" onmouseout="underMenuSlideHover2('underMenu1Slide1Div1')"><a href="#">صفر</a></li>
+                <li id="underMenu2Slide1Div1" onmouseover="underMenuSlideHover('underMenu2Slide1Div1')" onmouseout="underMenuSlideHover2('underMenu2Slide1Div1')"><a href="#">کم مصرف</a></li>
+                <li id="underMenu3Slide1Div1" onmouseover="underMenuSlideHover('underMenu3Slide1Div1')" onmouseout="underMenuSlideHover2('underMenu3Slide1Div1')"><a href="#">اقتصادی</a></li>
+                <li id="underMenu4Slide1Div1" onmouseover="underMenuSlideHover('underMenu4Slide1Div1')" onmouseout="underMenuSlideHover2('underMenu4Slide1Div1')"><a href="#">آفرود</a></li>
+                <li id="underMenu5Slide1Div1" onmouseover="underMenuSlideHover('underMenu5Slide1Div1')" onmouseout="underMenuSlideHover2('underMenu5Slide1Div1')"><a href="#">هیبرید</a></li>
+                <li id="underMenu6Slide1Div1" onmouseover="underMenuSlideHover('underMenu6Slide1Div1')" onmouseout="underMenuSlideHover2('underMenu6Slide1Div1')"><a href="#">اقساطی</a></li>
+                <li id="underMenu7Slide1Div1" onmouseover="underMenuSlideHover('underMenu7Slide1Div1')" onmouseout="underMenuSlideHover2('underMenu7Slide1Div1')"><a href="#">8 سیلندر</a></li>
+                <li id="underMenu8Slide1Div1" onmouseover="underMenuSlideHover('underMenu8Slide1Div1')" onmouseout="underMenuSlideHover2('underMenu8Slide1Div1')"><a href="#">ژاپنی ها</a></li>
+            </ul>
+            <ul class="slide" id="menu1Slide2">
+                <li id="underMenu1Slide2Div1" onmouseover="underMenuSlideHover('underMenu1Slide2Div1')" onmouseout="underMenuSlideHover2('underMenu1Slide2Div1')"><a href="#">وارداتی</a></li>
+                <li id="underMenu2Slide2Div1" onmouseover="underMenuSlideHover('underMenu2Slide2Div1')" onmouseout="underMenuSlideHover2('underMenu2Slide2Div1')"><a href="#">زیر 1300cc</a></li>
+                <li id="underMenu3Slide2Div1" onmouseover="underMenuSlideHover('underMenu3Slide2Div1')" onmouseout="underMenuSlideHover2('underMenu3Slide2Div1')"><a href="#">لوکس</a></li>
+                <li id="underMenu4Slide2Div1" onmouseover="underMenuSlideHover('underMenu4Slide2Div1')" onmouseout="underMenuSlideHover2('underMenu4Slide2Div1')"><a href="#">کلاسیک</a></li>
+                <li id="underMenu5Slide2Div1" onmouseover="underMenuSlideHover('underMenu5Slide2Div1')" onmouseout="underMenuSlideHover2('underMenu5Slide2Div1')"><a href="#">اتوماتیک</a></li>
+                <li id="underMenu6Slide2Div1" onmouseover="underMenuSlideHover('underMenu6Slide2Div1')" onmouseout="underMenuSlideHover2('underMenu6Slide2Div1')"><a href="#">قابل معاوضه</a></li>
+                <li id="underMenu7Slide2Div1" onmouseover="underMenuSlideHover('underMenu7Slide2Div1')" onmouseout="underMenuSlideHover2('underMenu7Slide2Div1')"><a href="#">کره ای ها</a></li>
+                <li id="underMenu8Slide2Div1" onmouseover="underMenuSlideHover('underMenu8Slide2Div1')" onmouseout="underMenuSlideHover2('underMenu8Slide2Div1')"><a href="#">آلمانی ها</a></li>
+            </ul>
+            <ul class="slide" id="menu1Slide3">
+                <li id="underMenu1Slide3Div1"  onmouseover="underMenuSlideHover('underMenu1Slide3Div1')" onmouseout="underMenuSlideHover2('underMenu1Slide3Div1')"><a href="#">مونتاژی</a></li>
+                <li id="underMenu2Slide3Div1"  onmouseover="underMenuSlideHover('underMenu2Slide3Div1')" onmouseout="underMenuSlideHover2('underMenu2Slide3Div1')"><a href="#">داخلی</a></li>
+                <li id="underMenu3Slide3Div1"  onmouseover="underMenuSlideHover('underMenu3Slide3Div1')" onmouseout="underMenuSlideHover2('underMenu3Slide3Div1')"><a href="#">دو دیفرانسیل</a></li>
+                <li id="underMenu4Slide3Div1"  onmouseover="underMenuSlideHover('underMenu4Slide3Div1')" onmouseout="underMenuSlideHover2('underMenu4Slide3Div1')"><a href="#">منطقه آزاد</a></li>
+                <li id="underMenu5Slide3Div1"  onmouseover="underMenuSlideHover('underMenu5Slide3Div1')" onmouseout="underMenuSlideHover2('underMenu5Slide3Div1')"><a href="#">بالای 2500cc</a></li>
+                <li id="underMenu6Slide3Div1"  onmouseover="underMenuSlideHover('underMenu6Slide3Div1')" onmouseout="underMenuSlideHover2('underMenu6Slide3Div1')"><a href="#">دوگانه سوز</a></li>
+                <li id="underMenu7Slide3Div1"  onmouseover="underMenuSlideHover('underMenu7Slide3Div1')" onmouseout="underMenuSlideHover2('underMenu7Slide3Div1')"><a href="#">6 سیلندر</a></li>
+            </ul>
+            <div id="sliderDots">
+                <a id="prev" onclick="changeSlide(-1)">قبلی</a>
+                <span id="dot" class="dot" onclick="currentSlide(1)"></span>
+                <span id="dot" class="dot" onclick="currentSlide(2)"></span>
+                <span id="dot" class="dot" onclick="currentSlide(3)"></span>
+                <a id="next" onclick="changeSlide(1)">بعدی</a>
+            </div>
+        </div>
+        <div id="selectedMenu3Div" class="underMenuOfRhigtMenu2 sliders">
+            <ul>
+                <li id="underMenu1Li1" onmouseover="underMenuSlideHover('underMenu1Li1')" onmouseout="underMenuSlideHover2('underMenu1Li1')"><a href="#">سدان</a></li>
+                <li id="underMenu1Li2" onmouseover="underMenuSlideHover('underMenu1Li2')" onmouseout="underMenuSlideHover2('underMenu1Li2')"><a href="#">شاسی بلند</a></li>
+                <li id="underMenu1Li3" onmouseover="underMenuSlideHover('underMenu1Li3')" onmouseout="underMenuSlideHover2('underMenu1Li3')"><a href="#">کروک</a></li>
+                <li id="underMenu1Li4" onmouseover="underMenuSlideHover('underMenu1Li4')" onmouseout="underMenuSlideHover2('underMenu1Li4')"><a href="#">کوپه</a></li>
+                <li id="underMenu1Li5" onmouseover="underMenuSlideHover('underMenu1Li5')" onmouseout="underMenuSlideHover2('underMenu1Li5')"><a href="#">وانت</a></li>
+                <li id="underMenu1Li6" onmouseover="underMenuSlideHover('underMenu1Li6')" onmouseout="underMenuSlideHover2('underMenu1Li6')"><a href="#">ون</a></li>
+                <li id="underMenu1Li7" onmouseover="underMenuSlideHover('underMenu1Li7')" onmouseout="underMenuSlideHover2('underMenu1Li7')"><a href="#">هاچپک</a></li>
+            </ul>
         </div>
     </div>
 </body>

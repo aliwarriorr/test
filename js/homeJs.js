@@ -54,7 +54,151 @@ function changeOpacity(thisId){
 function changeOpacity2(thisId){
     document.getElementById(thisId).style.filter = 'opacity(30%)'
 }
-function liClicked(n){
-    document.getElementsByClassName('aaRightMenu').className =  document.getElementsByClassName('aaRightMenu').className.replace("active","")
-    document.getElementsByClassName(n).className = 'active'
+function liClicked1(n, no){
+    var sliders = document.getElementsByClassName('sliders')
+    for(var i=0 ; i<sliders.length ; i++){
+        sliders[i].style.display = 'none'
+    }
+
+    var arightMenu = document.getElementsByClassName('aaRightMenu')
+    for(var i=0 ; i<arightMenu.length ; i++){
+        arightMenu[i].className =  arightMenu[i].className.replace("active","repla")
+    }
+    var nMenu = document.getElementsByClassName(n)
+    nMenu[0].className =nMenu[0].className.replace("repla","active")
+
+    for(var i=0 ; i<arightMenu.length ; i++){
+        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(n)')
+    }
+    nMenu[0].removeAttribute('onmouseout')
+
+    var xIcons = document.getElementsByClassName('xIcons')
+    for(var i=0 ; i<xIcons.length ; i++){
+        xIcons[i].style.display = 'none'
+
+    document.getElementById("selectedMenu1Div").style.display = 'block'
+    }
+    document.getElementById(no).style.display = 'block'
+    displaySlide(1);
+}
+function underMenuSlideHover(thisId){
+    document.getElementById(thisId).style.filter = 'opacity(70%)'
+}
+function underMenuSlideHover2(thisId){
+    document.getElementById(thisId).style.filter = 'opacity(100%)'
+}
+
+var currentIndex = 1;
+
+function displaySlide(n){
+    currentIndex = n;
+    var slide = document.getElementsByClassName("slide");
+    var dots =document.getElementsByClassName("dot");
+
+    if(currentIndex > slide.length){
+        currentIndex = 1;
+    }
+    if(currentIndex < 1){
+        currentIndex = slide.length
+    }
+    for(var i=0 ; i<slide.length ; i++){
+        slide[i].style.display = 'none';
+        dots[i].className = dots[i].className.replace("active"," ");
+    }
+    
+    slide[currentIndex - 1].style.display = 'flex';
+    dots[currentIndex - 1].className = "dot active";
+}
+
+function changeSlide(n){
+    currentIndex += n;
+    displaySlide(currentIndex);
+}
+
+function currentSlide(n){
+    displaySlide(n);
+}
+function closeAllMenues(){
+    var underMenues = document.getElementsByClassName('sliders')
+    for(var i=0 ; i<underMenues.length ; i++){
+        underMenues[i].style.display = 'none'
+    }
+    var xIconss = document.getElementsByClassName('xIcons')
+    for(var i=0 ; i<xIconss.length ; i++){
+        xIconss[i].style.display = 'none'
+    }
+}
+function liClicked2(n, no){
+    var sliders = document.getElementsByClassName('sliders')
+    for(var i=0 ; i<sliders.length ; i++){
+        sliders[i].style.display = 'none'
+    }
+
+    var arightMenu = document.getElementsByClassName('aaRightMenu')
+    for(var i=0 ; i<arightMenu.length ; i++){
+        arightMenu[i].className =  arightMenu[i].className.replace("active","repla")
+    }
+    var nMenu = document.getElementsByClassName(n)
+    nMenu[0].className =nMenu[0].className.replace("repla","active")
+
+    for(var i=0 ; i<arightMenu.length ; i++){
+        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(n)')
+    }
+    nMenu[0].removeAttribute('onmouseout')
+
+    var xIcons = document.getElementsByClassName('xIcons')
+    for(var i=0 ; i<xIcons.length ; i++){
+        xIcons[i].style.display = 'none'
+    }
+    document.getElementById(no).style.display = 'block'
+}
+function liClicked3(n, no){
+    var sliders = document.getElementsByClassName('sliders')
+    for(var i=0 ; i<sliders.length ; i++){
+        sliders[i].style.display = 'none'
+    }
+
+    var arightMenu = document.getElementsByClassName('aaRightMenu')
+    for(var i=0 ; i<arightMenu.length ; i++){
+        arightMenu[i].className =  arightMenu[i].className.replace("active","repla")
+    }
+    var nMenu = document.getElementsByClassName(n)
+    nMenu[0].className =nMenu[0].className.replace("repla","active")
+
+    for(var i=0 ; i<arightMenu.length ; i++){
+        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(n)')
+    }
+    nMenu[0].removeAttribute('onmouseout')
+
+    var xIcons = document.getElementsByClassName('xIcons')
+    for(var i=0 ; i<xIcons.length ; i++){
+        xIcons[i].style.display = 'none'
+    }
+    document.getElementById(no).style.display = 'block'
+    document.getElementById('selectedMenu3Div').style.display = 'flex'
+
+}
+function liClicked4(n, no){
+    var sliders = document.getElementsByClassName('sliders')
+    for(var i=0 ; i<sliders.length ; i++){
+        sliders[i].style.display = 'none'
+    }
+
+    var arightMenu = document.getElementsByClassName('aaRightMenu')
+    for(var i=0 ; i<arightMenu.length ; i++){
+        arightMenu[i].className =  arightMenu[i].className.replace("active","repla")
+    }
+    var nMenu = document.getElementsByClassName(n)
+    nMenu[0].className =nMenu[0].className.replace("repla","active")
+
+    for(var i=0 ; i<arightMenu.length ; i++){
+        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(n)')
+    }
+    nMenu[0].removeAttribute('onmouseout')
+
+    var xIcons = document.getElementsByClassName('xIcons')
+    for(var i=0 ; i<xIcons.length ; i++){
+        xIcons[i].style.display = 'none'
+    }
+    document.getElementById(no).style.display = 'block'
 }

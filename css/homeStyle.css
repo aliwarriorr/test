@@ -172,12 +172,80 @@ ul{
     filter: opacity(30%);
     display: none;
 }
-#animationDiv{
+#selectedMenu1Div{
     width: 76%;
     height: 90%;
-    background-color: yellow;
+    display: none;
 }
 #rightMenu li a.active{
     color: #c411ac;
     font-weight: bold;
+}
+#selectedMenu1Div a{
+    cursor: pointer;
+}
+#dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+#sliderDots{
+    padding-right: 35%;
+}
+#menu1Slide1,#menu1Slide2,#menu1Slide3{
+    display: none;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 70%;
+    margin-top: 20px;
+}
+#menu1Slide1 li,#menu1Slide2 li,#menu1Slide3 li{
+    height: 100px;
+    width: 170px;
+    text-align: center;
+}
+#menu1Slide1 a,#menu1Slide2 a,#menu1Slide3 a{
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    filter: opacity(50%);
+    color: black;
+    height: 100px;
+}
+#dot.active{
+    background-color: #1c8092;
+}
+#prev, #next{
+    margin: 30px;
+}
+#selectedMenu3Div{
+    display: none;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin: 50px;
+}
+#selectedMenu3Div ul{
+    list-style-type: none;
+    display:flex ;
+    flex-wrap: wrap;
+    width: 750px;
+    margin-top: 150px;
+}
+#selectedMenu3Div li{
+    height: 100px;
+    width: 160px;
+    text-align: center;
+}
+#selectedMenu3Div a{
+    height: 100px;
+    width: 170px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    filter: opacity(50%);
 }
