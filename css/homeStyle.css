@@ -33,7 +33,7 @@ body{
     flex-direction: column;
 }
 #topMenu{
-    height: 120px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -271,7 +271,14 @@ ul{
 .aaRightMenu{
     color: black;
 }
+#myHeader{
+    display: none;
+}
 @media only screen and (max-width:1000px){
+    body{
+        width: 100%;
+        
+    }
     #littleMenuDiv{
         display: none;
     }
@@ -279,7 +286,14 @@ ul{
         display: none;
     }
     #searchDiv{
-        width: 100%;
+        width: 95%;
+    }
+    #searchInput{
+        background-color: white;
+        height: 43px;
+    }
+    #topMenu{
+        background-color: #ececec;
     }
     #middleMenu{
         align-items: flex-start;
@@ -302,5 +316,45 @@ ul{
     }
     #selectedMenu1Div,#selectedMenu2Div,#selectedMenu3Div,#selectedMenu4Div{
         width: 100%;
+    }
+    .container{
+        max-width: 970px;
+    }
+    #selectedMenu1Div{
+        display: block;
+    }
+    #menu1Slide1{
+        display: block;
+    }
+    #myHeader{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        display: block;
+        direction: rtl;
+        background-color: #ececec;
+    }
+    #myHeader li{
+        list-style-type: none;
+        border: black 1px solid;
+    }
+    #myHeader a{
+        text-decoration: none;
+        color: black;
+    }
+    #threeLineIcon{
+        width: 37px;
+        float: right;
+        margin-top: 10px;
+    }
+    #freeAd{
+        width: 100px;
+        height: 28px;
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+        font-size: 13px;
+        text-align: center;
+        border-radius: 3px;
     }
 }
