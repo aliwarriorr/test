@@ -20,25 +20,25 @@ function mouseOutLi(thisId){
 }
 function changePage(){
     document.getElementById('xIcon').style.display = 'block'
+    document.getElementById('xIconDiv').className = document.getElementById('xIconDiv').className.replace("col-0","col-1")
     document.body.style.backgroundColor = '#e0e0e0'
     document.getElementById('topMenu').style.justifyContent = 'flex-start'
     document.getElementById('searchInput').style.marginRight = '20px'
     document.getElementById('searchInput').style.backgroundColor = 'white'
-    document.getElementById('littleMenu').style.display = 'none'
+    document.getElementById('littleMenuDiv').style.display = 'none'
     document.getElementById('loginDiv').style.display = 'none'
-    document.getElementById('bamaIconDiv').style.display = 'none'
-    document.getElementById('searchInput').style.width = '500px'
+    document.getElementById('searchDiv').className = document.getElementById('searchDiv').className.replace("col-4","col-7")
     document.getElementById('middleMenu').style.display = 'none'
 }
 function clickX(){
     document.getElementById('xIcon').style.display = 'none'
+    document.getElementById('xIconDiv').className = document.getElementById('xIconDiv').className.replace("col-1","col-0")
     document.body.style.backgroundColor = 'white'
     document.getElementById('topMenu').style.justifyContent = 'space-between'
     document.getElementById('searchInput').style.marginRight = '0px'
     document.getElementById('searchInput').style.backgroundColor = '#ececec'
-    document.getElementById('bamaIconDiv').style.display = 'block'
-    document.getElementById('searchInput').style.width = '300px'
-    document.getElementById('littleMenu').style.display = 'flex'
+    document.getElementById('searchDiv').className = document.getElementById('searchDiv').className.replace("col-7","col-4")
+    document.getElementById('littleMenuDiv').style.display = 'flex'
     document.getElementById('loginDiv').style.display = 'flex'
     document.getElementById('middleMenu').style.display = 'flex'
 }
@@ -63,12 +63,14 @@ function liClicked1(n, no){
     var arightMenu = document.getElementsByClassName('aaRightMenu')
     for(var i=0 ; i<arightMenu.length ; i++){
         arightMenu[i].className =  arightMenu[i].className.replace("active","repla")
+        arightMenu[i].style.color = 'black'
     }
+    
     var nMenu = document.getElementsByClassName(n)
     nMenu[0].className =nMenu[0].className.replace("repla","active")
 
     for(var i=0 ; i<arightMenu.length ; i++){
-        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(n)')
+        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(aRightMenu1)')
     }
     nMenu[0].removeAttribute('onmouseout')
 
@@ -142,7 +144,7 @@ function liClicked2(n, no){
     nMenu[0].className =nMenu[0].className.replace("repla","active")
 
     for(var i=0 ; i<arightMenu.length ; i++){
-        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(n)')
+        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(aRightMenu2)')
     }
     nMenu[0].removeAttribute('onmouseout')
 
@@ -166,7 +168,7 @@ function liClicked3(n, no){
     nMenu[0].className =nMenu[0].className.replace("repla","active")
 
     for(var i=0 ; i<arightMenu.length ; i++){
-        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(n)')
+        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(aRightMenu3)')
     }
     nMenu[0].removeAttribute('onmouseout')
 
@@ -192,7 +194,7 @@ function liClicked4(n, no){
     nMenu[0].className =nMenu[0].className.replace("repla","active")
 
     for(var i=0 ; i<arightMenu.length ; i++){
-        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(n)')
+        arightMenu[i].getAttribute('onmouseout','changeMenuColor2(aRightMenu4)')
     }
     nMenu[0].removeAttribute('onmouseout')
 

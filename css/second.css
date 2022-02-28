@@ -1,50 +1,31 @@
-*{
-    box-sizing: border-box;
-}
-.col-0{width: 0%;}
-.col-1{width: 8.33%;}
-.col-2{width: 16.66%;}
-.col-3{width: 25%;}
-.col-4{width: 33.33%;}
-.col-5{width: 41.66%;}
-.col-6{width: 50%;}
-.col-7{width: 58.33%;}
-.col-8{width: 66.66%;}
-.col-9{width: 75%;}
-.col-10{width: 83.33%;}
-.col-11{width: 91.66%;}
-.col-12{width: 100%;}
-
-[class*="col-"]{
-    float:left;
-    padding: 15px;
-}
-.row:after{
-    content: "";
-    clear: both;
-    display: block;
-}
 body{
     margin: 0px;
     padding: 0px;
     direction: rtl;
-    display: flex;
     align-items: center;
     flex-direction: column;
 }
 #topMenu{
+    width: 60%;
     height: 120px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     border-bottom: solid black 1px;
+    margin-top: 50px;
 }
-
+#bamaIconDiv{
+    float: left;
+}
+#bamaIcon{
+    width: 100px;
+}
 #loginDiv{
     display: flex;
+    width: 150px;
     justify-content: space-between;
     flex-wrap: nowrap;
-    align-items: center;
+    margin-top: 50px;
 }
 #loginDiv div{
     height: 30px;
@@ -52,13 +33,7 @@ body{
 #loginDiv a{
     text-decoration: none;
     color: black;
-    position: relative;
-    bottom: 10px;
-}
-
-#login{
-    position: relative;
-    top: 10px;
+    padding: 6px;
 }
 #free{
     font-size: 10px;
@@ -66,25 +41,20 @@ body{
     font-weight: bold;
 }
 #searchInput{
+    width: 300px;
     height: 35px;
     background-color: #ececec;
     border-radius: 5px;
     border: none;
     border-bottom: 2px solid #99ebff;
-}
-#searchDiv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 45px;
 }
 #littleMenu{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-}
-#bamaIcon{
-    position: relative;
-    bottom: 40px;
+    width: 250px;
+    margin-top: 55px;
 }
 ul{
     list-style-type: none;
@@ -157,9 +127,12 @@ ul{
     padding: 5px;
 }
 #xIcon{
+    height: 35px;
+    margin-top: 45px;
     display: none;
 }
 #middleMenu{
+    width: 60%;
     height: 500px;
     display: flex;
     justify-content: space-between;
@@ -167,6 +140,7 @@ ul{
     align-items: center;
 }
 #rightMenu{
+    width: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,6 +172,7 @@ ul{
     display: none;
 }
 #selectedMenu1Div{
+    width: 76%;
     height: 90%;
     display: none;
 }
@@ -222,10 +197,13 @@ ul{
 #menu1Slide1,#menu1Slide2,#menu1Slide3{
     display: none;
     flex-wrap: wrap;
+    width: 100%;
     height: 70%;
+    margin-top: 20px;
 }
 #menu1Slide1 li,#menu1Slide2 li,#menu1Slide3 li{
     height: 100px;
+    width: 170px;
     text-align: center;
 }
 #menu1Slide1 a,#menu1Slide2 a,#menu1Slide3 a{
@@ -245,26 +223,28 @@ ul{
 #selectedMenu3Div{
     display: none;
     flex-wrap: wrap;
+    width: 100%;
     height: 100%;
+    margin: 50px;
 }
 #selectedMenu3Div ul{
     list-style-type: none;
     display:flex ;
     flex-wrap: wrap;
-    margin-top: 100px;
+    width: 750px;
+    margin-top: 150px;
 }
 #selectedMenu3Div li{
     height: 100px;
+    width: 160px;
     text-align: center;
 }
 #selectedMenu3Div a{
     height: 100px;
+    width: 170px;
     text-decoration: none;
     color: black;
     font-weight: bold;
     display: block;
     filter: opacity(50%);
-}
-.aaRightMenu{
-    color: black;
 }
