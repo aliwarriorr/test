@@ -173,7 +173,7 @@ ul{
 }
 #rightMenu li{
     height: 100px;
-    width: 150px;
+    width: auto;
     border-bottom: 1px solid black;
     display: flex;
     align-items: center;
@@ -200,6 +200,9 @@ ul{
 #selectedMenu1Div{
     height: 90%;
     display: none;
+}
+#selectedMenu1Div,#selectedMenu2Div,#selectedMenu3Div,#selectedMenu4Div{
+    width: 75%;
 }
 #rightMenu li a.active{
     color: #c411ac;
@@ -267,4 +270,37 @@ ul{
 }
 .aaRightMenu{
     color: black;
+}
+@media only screen and (max-width:1000px){
+    #littleMenuDiv{
+        display: none;
+    }
+    #loginDiv{
+        display: none;
+    }
+    #searchDiv{
+        width: 100%;
+    }
+    #middleMenu{
+        align-items: flex-start;
+    }
+    #rightMenu{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        border-bottom: solid black 1px;
+    }
+    #rightMenu li{
+        width: 25%;
+        border-bottom: none;
+        height: 50px;
+    }
+    #rightMenu a{
+        border-bottom: none;
+        height: 50px;
+    }
+    #selectedMenu1Div,#selectedMenu2Div,#selectedMenu3Div,#selectedMenu4Div{
+        width: 100%;
+    }
 }
