@@ -220,7 +220,8 @@ ul{
     display: inline-block;
 }
 #sliderDots{
-    padding-right: 35%;
+    display: flex;
+    justify-content: center;
 }
 #menu1Slide1,#menu1Slide2,#menu1Slide3{
     display: none;
@@ -244,6 +245,8 @@ ul{
 }
 #prev, #next{
     margin: 30px;
+    position: relative;
+    bottom: 40px;
 }
 #selectedMenu3Div{
     display: none;
@@ -286,7 +289,7 @@ ul{
         display: none;
     }
     #searchDiv{
-        width: 95%;
+        width: 100%;
     }
     #searchInput{
         background-color: white;
@@ -356,5 +359,8 @@ ul{
         font-size: 13px;
         text-align: center;
         border-radius: 3px;
+    }
+    #xIconDiv{
+        display: none;
     }
 }
