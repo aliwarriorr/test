@@ -18,29 +18,88 @@ function mouseOnLi(thisId){
 function mouseOutLi(thisId){
     document.getElementById(thisId).style.backgroundColor="#e0e0e0"
 }
+function headerDisplay(){
+    if(innerWidth<1000){
+        document.getElementById('myHeader').style.display = 'flex'
+        if(document.getElementById('xIcon').style.display == 'block'){
+            document.getElementById('myHeader').style.display = 'none'
+            document.getElementById('searchInput').style.animation = 'searchResposive3 .2s'
+            document.getElementById('searchInput').style.animationIterationCount = '1'
+            document.getElementById('searchInput').style.animationFillMode = 'forwards'
+        }
+    }
+    if(innerWidth>1000){
+        document.getElementById('myHeader').style.display = 'none'
+        document.getElementById('fixedRightMenu').style.display = 'none'
+        if(document.getElementById('xIcon').style.display == 'block'){
+            document.getElementById('searchInput').style.animation = 'searchResposive4 .2s'
+            document.getElementById('searchInput').style.animationIterationCount = '1'
+            document.getElementById('searchInput').style.animationFillMode = 'forwards'
+        }
+    }
+}
 function changePage(){
-    document.getElementById('xIcon').style.display = 'block'
-    document.getElementById('xIconDiv').className = document.getElementById('xIconDiv').className.replace("col-0","col-1")
-    document.body.style.backgroundColor = '#e0e0e0'
-    document.getElementById('topMenu').style.justifyContent = 'flex-start'
-    document.getElementById('searchInput').style.marginRight = '20px'
-    document.getElementById('searchInput').style.backgroundColor = 'white'
-    document.getElementById('littleMenuDiv').style.display = 'none'
-    document.getElementById('loginDiv').style.display = 'none'
-    document.getElementById('searchDiv').className = document.getElementById('searchDiv').className.replace("col-4","col-7")
-    document.getElementById('middleMenu').style.display = 'none'
+    if(innerWidth>1000){
+        document.getElementById('xIcon').style.display = 'block'
+        document.getElementById('xIconDiv').className = document.getElementById('xIconDiv').className.replace("col-0","col-1")
+        document.body.style.backgroundColor = '#e0e0e0'
+        document.getElementById('searchInput').style.marginRight = '20px'
+        document.getElementById('searchInput').style.backgroundColor = 'white'
+        document.getElementById('littleMenuDiv').style.display = 'none'
+        document.getElementById('loginDiv').style.display = 'none'
+        document.getElementById('searchDiv').className = document.getElementById('searchDiv').className.replace("col-4","col-7")
+        document.getElementById('searchInput').style.animation = 'openSearch .5s'
+        document.getElementById('searchInput').style.animationFillMode = 'forwards'
+        document.getElementById('searchInput').style.animationIterationCount = '1'
+        document.getElementById('middleMenu').style.display = 'none'
+        document.getElementById('myHeader').style.display = 'none'
+    }
+    else{
+        document.getElementById('xIcon').style.display = 'block'
+        document.getElementById('xIconDiv').className = document.getElementById('xIconDiv').className.replace("col-0","col-1")
+        document.body.style.backgroundColor = '#e0e0e0'
+        document.getElementById('searchInput').style.marginRight = '20px'
+        document.getElementById('searchInput').style.backgroundColor = 'white'
+        document.getElementById('littleMenuDiv').style.display = 'none'
+        document.getElementById('loginDiv').style.display = 'none'
+        document.getElementById('searchDiv').className = document.getElementById('searchDiv').className.replace("col-4","col-7")
+        document.getElementById('searchDiv').style.animation = 'searchResposive .2s'
+        document.getElementById('searchDiv').style.animationIterationCount = '1'
+        document.getElementById('searchDiv').style.animationFillMode = 'forwards'
+        document.getElementById('middleMenu').style.display = 'none'
+        document.getElementById('myHeader').style.display = 'none'
+    }
 }
 function clickX(){
-    document.getElementById('xIcon').style.display = 'none'
-    document.getElementById('xIconDiv').className = document.getElementById('xIconDiv').className.replace("col-1","col-0")
-    document.body.style.backgroundColor = 'white'
-    document.getElementById('topMenu').style.justifyContent = 'space-between'
-    document.getElementById('searchInput').style.marginRight = '0px'
-    document.getElementById('searchInput').style.backgroundColor = '#ececec'
-    document.getElementById('searchDiv').className = document.getElementById('searchDiv').className.replace("col-7","col-4")
-    document.getElementById('littleMenuDiv').style.display = 'flex'
-    document.getElementById('loginDiv').style.display = 'flex'
-    document.getElementById('middleMenu').style.display = 'flex'
+    if(innerWidth>1000){
+        document.getElementById('xIcon').style.display = 'none'
+        document.getElementById('xIconDiv').className = document.getElementById('xIconDiv').className.replace("col-1","col-0")
+        document.body.style.backgroundColor = 'white'
+        document.getElementById('searchInput').style.marginRight = '0px'
+        document.getElementById('searchInput').style.backgroundColor = '#ececec'
+        document.getElementById('searchDiv').className = document.getElementById('searchDiv').className.replace("col-7","col-4")
+        document.getElementById('searchInput').style.animation = 'closeSearch .5s'
+        document.getElementById('searchInput').style.animationFillMode = 'forwards'
+        document.getElementById('searchInput').style.animationIterationCount = '1'
+        document.getElementById('littleMenuDiv').style.display = 'flex'
+        document.getElementById('loginDiv').style.display = 'flex'
+        document.getElementById('middleMenu').style.display = 'flex'
+    }
+    if(innerWidth<1000){
+        document.getElementById('myHeader').style.display = 'flex'
+        document.getElementById('xIcon').style.display = 'none'
+        document.getElementById('xIconDiv').className = document.getElementById('xIconDiv').className.replace("col-1","col-0")
+        document.body.style.backgroundColor = 'white'
+        document.getElementById('searchInput').style.marginRight = '0px'
+        document.getElementById('searchInput').style.backgroundColor = '#ececec'
+        document.getElementById('searchDiv').className = document.getElementById('searchDiv').className.replace("col-7","col-4")
+        document.getElementById('searchDiv').style.animation = 'searchResposive2 .2s'
+        document.getElementById('searchDiv').style.animationIterationCount = '1'
+        document.getElementById('searchDiv').style.animationFillMode = 'forwards'
+        document.getElementById('littleMenuDiv').style.display = 'flex'
+        document.getElementById('loginDiv').style.display = 'flex'
+        document.getElementById('middleMenu').style.display = 'flex'
+    }
 }
 function changeMenuColor(thisId){
     document.getElementById(thisId).style.color = '#c411ac'
@@ -68,6 +127,7 @@ function liClicked1(n, no){
     
     var nMenu = document.getElementsByClassName(n)
     nMenu[0].className =nMenu[0].className.replace("repla","active")
+    nMenu[0].style.color = "#c411ac"
 
     for(var i=0 ; i<arightMenu.length ; i++){
         arightMenu[i].getAttribute('onmouseout','changeMenuColor2(aRightMenu1)')
@@ -129,6 +189,11 @@ function closeAllMenues(){
     for(var i=0 ; i<xIconss.length ; i++){
         xIconss[i].style.display = 'none'
     }
+    var aRightMenu = document.getElementsByClassName("aaRightMenu");
+    for(var i=0 ; i<aRightMenu.length ; i++){
+        aRightMenu[i].style.color = 'black';
+        aRightMenu[i].style.fontWeight = '500';
+    }
 }
 function liClicked2(n, no){
     var sliders = document.getElementsByClassName('sliders')
@@ -139,9 +204,11 @@ function liClicked2(n, no){
     var arightMenu = document.getElementsByClassName('aaRightMenu')
     for(var i=0 ; i<arightMenu.length ; i++){
         arightMenu[i].className =  arightMenu[i].className.replace("active","repla")
+        arightMenu[i].style.color = 'black'
     }
     var nMenu = document.getElementsByClassName(n)
     nMenu[0].className =nMenu[0].className.replace("repla","active")
+    nMenu[0].style.color = "#c411ac"
 
     for(var i=0 ; i<arightMenu.length ; i++){
         arightMenu[i].getAttribute('onmouseout','changeMenuColor2(aRightMenu2)')
@@ -152,6 +219,8 @@ function liClicked2(n, no){
     for(var i=0 ; i<xIcons.length ; i++){
         xIcons[i].style.display = 'none'
     }
+    document.getElementById("selectedMenu2Div").style.display = 'block'
+
     document.getElementById(no).style.display = 'block'
 }
 function liClicked3(n, no){
@@ -163,9 +232,11 @@ function liClicked3(n, no){
     var arightMenu = document.getElementsByClassName('aaRightMenu')
     for(var i=0 ; i<arightMenu.length ; i++){
         arightMenu[i].className =  arightMenu[i].className.replace("active","repla")
+        arightMenu[i].style.color = 'black'
     }
     var nMenu = document.getElementsByClassName(n)
     nMenu[0].className =nMenu[0].className.replace("repla","active")
+    nMenu[0].style.color = "#c411ac"
 
     for(var i=0 ; i<arightMenu.length ; i++){
         arightMenu[i].getAttribute('onmouseout','changeMenuColor2(aRightMenu3)')
@@ -189,18 +260,59 @@ function liClicked4(n, no){
     var arightMenu = document.getElementsByClassName('aaRightMenu')
     for(var i=0 ; i<arightMenu.length ; i++){
         arightMenu[i].className =  arightMenu[i].className.replace("active","repla")
+        arightMenu[i].style.color = 'black'
     }
     var nMenu = document.getElementsByClassName(n)
     nMenu[0].className =nMenu[0].className.replace("repla","active")
+    nMenu[0].style.color = "#c411ac"
 
     for(var i=0 ; i<arightMenu.length ; i++){
         arightMenu[i].getAttribute('onmouseout','changeMenuColor2(aRightMenu4)')
     }
-    nMenu[0].removeAttribute('onmouseout')
+    nMenu[0].removeAttribute('onmouseout');
 
     var xIcons = document.getElementsByClassName('xIcons')
     for(var i=0 ; i<xIcons.length ; i++){
         xIcons[i].style.display = 'none'
     }
+    document.getElementById("selectedMenu4Div").style.display = 'block'
+
     document.getElementById(no).style.display = 'block'
+}
+function openMyMenu(){
+    document.getElementById('fixedRightMenu').style.display = "block"
+}
+function closeMyMenu(){
+    document.getElementById('fixedRightMenu').style.display = "none"
+}
+function showRightUnderMenu1(){
+    if(document.getElementById('fixedRightMenu3').style.height < '70px'){
+        document.getElementById('fixedRightMenu3').style.animationIterationCount = '1'
+        document.getElementById('fixedRightMenu3').style.animation = 'openMenu1 1s'
+        document.getElementById('fixedRightMenu3').style.animationFillMode = 'forwards'
+        document.getElementById('topArrow1').style.transform = 'rotate(360deg)'
+    }
+    else{
+        document.getElementById('fixedRightMenu3').style.animationIterationCount = '1'
+        document.getElementById('fixedRightMenu3').style.animation = 'closeMenu1 1s'
+        document.getElementById('fixedRightMenu3').style.animationFillMode = 'forwards'       
+        document.getElementById('topArrow1').style.transform = 'rotate(180deg)'
+    }
+}
+function showRightUnderMenu2(){
+    if(document.getElementById('fixedRightMenu4').style.height < '70px'){
+        document.getElementById('fixedRightMenu4').style.animationIterationCount = '1'
+        document.getElementById('fixedRightMenu4').style.animation = 'openMenu2 1s'
+        document.getElementById('fixedRightMenu4').style.animationFillMode = 'forwards'
+        document.getElementById('topArrow1').style.transform = 'rotate(360deg)'
+    }
+    else{
+        document.getElementById('fixedRightMenu4').style.animationIterationCount = '1'
+        document.getElementById('fixedRightMenu4').style.animation = 'closeMenu2 1s'
+        document.getElementById('fixedRightMenu4').style.animationFillMode = 'forwards'       
+        document.getElementById('topArrow1').style.transform = 'rotate(180deg)'
+    }
+}
+function closeFixedRightMenu(){
+    document.getElementById('fixedRightMenu').style.display = 'none'
 }

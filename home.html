@@ -9,12 +9,12 @@
     <script src="js/homeJs.js"></script>
     <title>باما، میانبر به بازار خودرو|bama</title>
 </head>
-<body class="container">
+<body class="container" onresize="headerDisplay()">
     <div id="myHeader">
         <img src="threeLineIcon.png" id="threeLineIcon" onclick="openMyMenu()">
         <li id="freeAd"><a href="#">ثبت آگهی<span id="free">رایگان</span></a></li>
     </div>
-    <div id="topMenu" class="col-12 row">
+    <div id="topMenu" class="col-12 row"  onclick="closeFixedRightMenu()">
         <div class="col-0" id="xIconDiv"><a href="#"><img src="xIcon.png"  class="col-12" id="xIcon" onclick="clickX()"/></a></div>
         <div id="littleMenuDiv" class="col-3">
             <ul id="littleMenu" class="col-12">
@@ -58,11 +58,11 @@
             <div id="logIn" class="col-2" onmouseover="mouseOnDiv('logIn')" onmouseout="mouseOutDiv('logIn')" title="ورود"><a href="#">ورود</a></div>
             <span class="col-1" id="spanLine">|</span>
             <div id="newAdvertise" class="col-5" onmouseover="mouseOnDiv('newAdvertise')" onmouseout="mouseOutDiv('newAdvertise')" title="ثبت آگهی"><a href="#">ثبت آگهی <span id="free">رایگان</span></a></div>
-            <div class="col-5 bamaIconDiv"><a href="#" id="bamaIconA" class=" bamaIconA"><img src="bamaIcon.png" class="col-12" id="bamaIcon" title="bama"/></a></div>
+            <div class="col-5 bamaIconDiv"><a href="#" id="bamaIconA" class=" bamaIconA"><img src="bamaIcon.png" class="col-10" id="bamaIcon" title="bama"/></a></div>
         </div>
         
     </div>
-    <div id="middleMenu" class="col-12 row">
+    <div id="middleMenu" class="col-12 row"  onclick="closeFixedRightMenu()">
         <ul id="rightMenu" class="col-3">
             <li class="col-3" id="uRightMenu1" ><a href="#" id="aRightMenu1" class="aaRightMenu aRightMenu1 repla" onmouseover="changeMenuColor('aRightMenu1')" onmouseout="changeMenuColor2('aRightMenu1')" onclick="liClicked1('aRightMenu1','xIcon2')">میانبر</a><a href="#"><img src="xIcon2.png" id="xIcon2" class="xIcons" onmouseover="changeOpacity('xIcon2')" onmouseout="changeOpacity2('xIcon2')" onclick="closeAllMenues()"></a></li>
             <li class="col-3" id="uRightMenu2" ><a href="#" id="aRightMenu2" class="aaRightMenu aRightMenu2 repla" onmouseover="changeMenuColor('aRightMenu2')" onmouseout="changeMenuColor2('aRightMenu2')" onclick="liClicked2('aRightMenu2','xIcon3')">برند</a><a href="#"><img src="xIcon2.png" id="xIcon3" class="xIcons" onmouseover="changeOpacity('xIcon3')" onmouseout="changeOpacity2('xIcon3')" onclick="closeAllMenues()"></a></li>
@@ -108,8 +108,62 @@
                 <a id="next" onclick="changeSlide(1)">بعدی</a>
             </div>
         </div>
+        <div id="selectedMenu2Div" class="col-12 sliders">
+            <ul id="menu2Slide1" class="col-12">
+                <li id="alphaBeta" class="col-2">آ</li>
+                <li class="col-2"><a href="#">آئودی</a></li>
+                <li class="col-2"><a href="#">آلفائومرو</a></li>
+                <li class="col-2"><a href="#">آریا</a></li>
+                <li class="col-2"><a href="#">آمیکو</a></li>
+                <li class="col-2" id="alphaBeta">ا</li>
+                <li class="col-2"><a href="#">اپل</a></li>
+                <li class="col-2"><a href="#">الدزمبیل</a></li>
+                <li class="col-2"><a href="#">ام وی ام</a></li>
+                <li class="col-2"><a href="#">ام جی</a></li>
+                <li class="col-2"><a href="#">اینفینیتی</a></li>
+                <li class="col-2"><a href="#">اسمارت</a></li>
+                <li class="col-2"><a href="#">ایسوزو</a></li>
+                <li class="col-2"><a href="#">اس دبلیو ام</a></li>
+                <li class="col-2" id="alphaBeta">ب</li>
+                <li class="col-2"><a href="#">بی ام و</a></li>
+                <li class="col-2"><a href="#">بیوک</a></li>
+                <li class="col-2"><a href="#">بنز</a></li>
+                <li class="col-2"><a href="#">بسترن</a></li>
+                <li class="col-2"><a href="#">بایک</a></li>
+                <li class="col-2"><a href="#">برلیانس</a></li>
+                <li class="col-2"><a href="#">بی وای دی</a></li>
+                <li class="col-2"><a href="#">بورگوارد</a></li>
+                <li class="col-2"><a href="#">بیسو</a></li>
+                <li class="col-2" id="alphaBeta">پ</li>
+                <li class="col-2"><a href="#">پاژن</a></li>
+                <li class="col-2"><a href="#">پراید</a></li>
+                <li class="col-2"><a href="#">پروتون</a></li>
+                <li class="col-2"><a href="#">پورشه</a></li>
+                <li class="col-2"><a href="#">پونتیاک</a></li>
+                <li class="col-2"><a href="#">پژو</a></li>
+                <li class="col-2"><a href="#">پیکان</a></li>
+                <li class="col-2" id="alphaBeta">ت</li>
+                <li class="col-2"><a href="#">تویوتا</a></li>
+                <li class="col-2"><a href="#">تیبا</a></li>
+                <li class="col-2"><a href="#">تارا</a></li>
+                <li class="col-2" id="alphaBeta">ج</li>
+                <li class="col-2"><a href="#">جگوار</a></li>
+                <li class="col-2"><a href="#">جیپ</a></li>
+                <li class="col-2"><a href="#">جک</a></li>
+                <li class="col-2"><a href="#">جیلی</a></li>
+                <li class="col-2"><a href="#">جی ام سی</a></li>
+                <li class="col-2"><a href="#">جِی ام سی</a></li>
+                <li class="col-2" id="alphaBeta">چ</li>
+                <li class="col-2"><a href="#">چری</a></li>
+                <li class="col-2"><a href="#">چانگان</a></li>
+                <li class="col-2" id="alphaBeta">د</li>
+                <li class="col-2"><a href="#">دوج</a></li>
+                <li class="col-2"><a href="#">دوو</a></li>
+                <li class="col-2"><a href="#">دنا</a></li>
+            </ul>
+        </div>
         <div id="selectedMenu3Div" class="underMenuOfRhigtMenu2 sliders col-9">
-            <ul>
+            <ul class="col-12">
                 <li class="col-3" id="underMenu1Li1" onmouseover="underMenuSlideHover('underMenu1Li1')" onmouseout="underMenuSlideHover2('underMenu1Li1')"><a href="#">سدان</a></li>
                 <li class="col-3" id="underMenu1Li2" onmouseover="underMenuSlideHover('underMenu1Li2')" onmouseout="underMenuSlideHover2('underMenu1Li2')"><a href="#">شاسی بلند</a></li>
                 <li class="col-3" id="underMenu1Li3" onmouseover="underMenuSlideHover('underMenu1Li3')" onmouseout="underMenuSlideHover2('underMenu1Li3')"><a href="#">کروک</a></li>
@@ -119,6 +173,59 @@
                 <li class="col-3" id="underMenu1Li7" onmouseover="underMenuSlideHover('underMenu1Li7')" onmouseout="underMenuSlideHover2('underMenu1Li7')"><a href="#">هاچپک</a></li>
             </ul>
         </div>
+        <div id="selectedMenu4Div" class="sliders col-9">
+            <span class="col-12">از قیمت های زیر انتخاب کنید:</span>
+            <li class="col-3"><a href="#">10 تا 50 میلیون</a></li>
+            <li class="col-3"><a href="#">50 تا 70 میلیون</a></li>
+            <li class="col-3"><a href="#">70 تا 100 میلیون</a></li>
+            <li class="col-3"><a href="#">100 تا 130 میلیون</a></li>
+            <li class="col-3"><a href="#">130 تا 150 میلیون</a></li>
+            <li class="col-3"><a href="#">150 تا 200 میلیون</a></li>
+            <li class="col-3"><a href="#">200 تا 250 میلیون</a></li>
+            <li class="col-3"><a href="#">250 تا 300 میلیون</a></li>
+            <li class="col-3"><a href="#">300 تا 350 میلیون</a></li>
+            <li class="col-3"><a href="#">350 تا 400 میلیون</a></li>
+            <li class="col-3"><a href="#">400 تا 500 میلیون</a></li>
+            <li class="col-3"><a href="#">500 تا 600 میلیون</a></li>
+            <li class="col-3"><a href="#">600 تا 800 میلیون</a></li>
+            <li class="col-3"><a href="#">800 تا 1000 میلیون</a></li>
+            <li class="col-3"><a href="#">1 تا 1.5 میلیارد</a></li>
+            <li class="col-3"><a href="#">1.5 میلیارد به بالا</a></li>
+        </div>
+    </div>
+    <div id="fixedRightMenu">
+        <div id="fixedMenuHeader" class="col-12">
+            <img src="xIcon3.png" id="fixedMenuXIcon" onclick="closeMyMenu()">
+        </div>
+        <ul>
+            <li class="col-12" id="fixedRightMenu1"><a href="#">ورود | ثبت نام</a></li>
+            <li class="col-12" id="fixedRightMenu2"><a href="#">ثبت آگهی <span id="free">رایگان</span></a></li>
+            <li class="col-12" id="fixedRightMenu3" onclick="showRightUnderMenu1()">خودرو <img src="topArrow.png" id="topArrow1">
+                <ul class="col-12" id="rightUnderMenu1">
+                    <li><a href="#">خرید خودرو</a></li>
+                    <li><a href="#">ثبت آگهی خودرو <span id="free">رایگان</span></a></li>
+                    <li><a href="#">قیمت روز خودرو</a></li>
+                    <li><a href="#">اخبار خودرو</a></li>
+                    <li><a href="#">مشخصات فنی خودرو</a></li>
+                    <li><a href="#">گوش به زنگ خودرو</a></li>
+                    <li><a href="#">کمپانی های خودرو</a></li>
+                </ul>
+            </li>
+            <li class="col-12" id="fixedRightMenu4" onclick="showRightUnderMenu2()">موتورسیکلت <img src="topArrow.png" id="topArrow2">
+                <ul class="col-12" id="rightUnderMenu2">
+                    <li><a href="#">خرید موتورسیکلت</a></li>
+                    <li><a href="#">ثبت آگهی موتورسیکلت <span id="free">رایگان</span></a></li>
+                    <li><a href="#">اخبار موتورسیکلت</a></li>
+                    <li><a href="#">گوش به زنگ موتورسیکلت</a></li>
+                </ul>
+            </li>
+            <li class="col-12" id="fixedRightMenu5"><a href="#">ثبت نام نمایشگاه</a></li>
+            <li class="col-12" id="fixedRightMenu6"><a href="#">تماس با ما</a></li>
+            <li class="col-12" id="fixedRightMenu7"><a href="#">تبلیغات شرکت ها</a></li>
+            <li class="col-12" id="fixedRightMenu8"><a href="#">قوانین سایت</a></li>
+            <li class="col-12" id="fixedRightMenu9"><a href="#">فرصت های شغلی</a></li>
+            <li class="col-12" id="fixedRightMenu10"><a href="#">درباره ما</a></li>
+        </ul>
     </div>
 </body>
 </html>

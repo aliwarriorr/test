@@ -1,3 +1,86 @@
+@keyframes openSearch{
+    from{
+        width: 50%;
+    }
+    to{
+        width: 70%;
+        transform: translate(70%,0px);
+    }
+}
+@keyframes closeSearch{
+    from{
+        width: 70%;
+        transform: translate(70%,0px);
+    }
+    to{
+        width: 100%;
+        transform: translate(0px,0px);
+    }
+}
+@keyframes openMenu1{
+    from{
+        height: 60px;
+    }
+    to{
+        height: 350px;
+    }
+}
+@keyframes openMenu2{
+    from{
+        height: 60px;
+    }
+    to{
+        height: 250px;
+    }
+}
+@keyframes closeMenu1{
+    from{
+        height: 350px;
+    }
+    to{
+        height: 60px;
+    }
+}
+@keyframes closeMenu2{
+    from{
+        height: 250px;
+    }
+    to{
+        height: 60px;
+    }
+}
+@keyframes searchResposive{
+    from{
+        transform: translateY(50px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes searchResposive2{
+    from{
+        transform: translateY(-50px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes searchResposive3{
+    from{
+        transform: translate(0px,50px);
+    }
+    to{
+        transform: translate(0px,0px);
+    }
+}
+@keyframes searchResposive4{
+    from{
+        transform: translate(0px,50px);
+    }
+    to{
+        transform: translate(150px,0px);
+    }
+}
 *{
     box-sizing: border-box;
 }
@@ -28,9 +111,7 @@ body{
     margin: 0px;
     padding: 0px;
     direction: rtl;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    height: 700px;
 }
 #topMenu{
     height: 100px;
@@ -71,6 +152,8 @@ body{
     border-radius: 5px;
     border: none;
     border-bottom: 2px solid #99ebff;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 #searchDiv{
     display: flex;
@@ -158,6 +241,8 @@ ul{
 }
 #xIcon{
     display: none;
+    position: relative;
+    bottom: 15px;
 }
 #middleMenu{
     height: 500px;
@@ -222,6 +307,7 @@ ul{
 #sliderDots{
     display: flex;
     justify-content: center;
+    height: 50px;
 }
 #menu1Slide1,#menu1Slide2,#menu1Slide3{
     display: none;
@@ -239,6 +325,48 @@ ul{
     filter: opacity(50%);
     color: black;
     height: 100px;
+}
+#selectedMenu2Div{
+    display: none;
+}
+#selectedMenu4Div{
+    display: none;
+}
+#selectedMenu4Div li{
+    list-style-type: none;
+}
+#selectedMenu4Div a{
+    text-decoration: none;
+    color: black;
+    height: 38px;
+}
+#selectedMenu4Div a:hover{
+    border: #2eb2c9 2px solid;
+    border-radius: 3px;
+}
+
+#menu2Slide1{
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#menu2Slide1 li{
+    height: 39px;
+}
+#menu2Slide1 a{
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+}
+#menu2Slide1 a:hover{
+    border: #2eb2c9 2px solid;
+    border-radius: 10px;
+}
+#alphaBeta{
+    list-style-type: disc;
+    color: #2eb2c9;
+    font-weight: bold;
 }
 #dot.active{
     background-color: #1c8092;
@@ -277,26 +405,31 @@ ul{
 #myHeader{
     display: none;
 }
+#fixedRightMenu{
+    display: none;
+}
 @media only screen and (max-width:1000px){
     body{
         width: 100%;
         
     }
     #littleMenuDiv{
-        display: none;
+        display: none !important;
     }
     #loginDiv{
-        display: none;
+        display: none !important;
     }
     #searchDiv{
-        width: 100%;
+        width: 90%;
     }
     #searchInput{
-        background-color: white;
+        background-color: white !important;
         height: 43px;
     }
     #topMenu{
         background-color: #ececec;
+        position: relative;
+        left: 12px;
     }
     #middleMenu{
         align-items: flex-start;
@@ -326,13 +459,19 @@ ul{
     #selectedMenu1Div{
         display: block;
     }
-    #menu1Slide1{
-        display: block;
+    #menu1Slide1,#menu1Slide2,#menu1Slide3{
+        display: flex;
+    }
+    #menu1Slide2,#menu1Slide3{
+        display: none;
+    }
+    #middleMenu{
+        border-bottom: none;
     }
     #myHeader{
         width: 100%;
+        height: 50px;
         display: flex;
-        flex-direction: row-reverse;
         display: block;
         direction: rtl;
         background-color: #ececec;
@@ -349,6 +488,7 @@ ul{
         width: 37px;
         float: right;
         margin-top: 10px;
+        cursor: pointer;
     }
     #freeAd{
         width: 100px;
@@ -360,7 +500,79 @@ ul{
         text-align: center;
         border-radius: 3px;
     }
-    #xIconDiv{
+    #uRightMenu1 a{
+        color: #c411ac;
+    }
+    #fixedRightMenu{
+        background-color: white;
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        float: right;
+        right: -1px;
+        top: -1px;
+        overflow: auto;
         display: none;
+        border-left: solid black 2px;
+    }
+    #menu1Div1{
+        display: none;
+    }
+    #xIcon2{
+        display: block;
+    }
+    #fixedRightMenu ul{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    #fixedRightMenu li{
+        
+    }
+    #fixedRightMenu2{
+        border-bottom: solid black 1px;
+    }
+    #fixedRightMenu5{
+        border-top: solid black 1px;
+    }
+    #fixedRightMenu3{
+        cursor: pointer;
+        overflow: hidden;
+        height: 60px;
+    }
+    #fixedRightMenu4{
+        cursor: pointer;
+        overflow: hidden;
+        height: 60px;
+    }
+    #fixedRightMenu1,#fixedRightMenu2,#fixedRightMenu5,#fixedRightMenu6,#fixedRightMenu7,#fixedRightMenu8,#fixedRightMenu9,#fixedRightMenu10{
+        height: 60px;
+    }
+    #fixedRightMenu a{
+        display: block;
+        color: black;
+        text-decoration: none;
+        height: 40px;
+    }
+    #fixedMenuXIcon{
+        width: 30px;
+        float: right;
+        cursor: pointer;
+    }
+    #fixedMenuHeader{
+        height: 60px;
+        border-bottom: 1px solid black;
+    }
+    #topArrow1,#topArrow2{
+        width: 20px;
+        filter: opacity(50%);
+        float: left;
+        transform: rotate(180deg);
+    }
+    #rightUnderMenu1 li,#rightUnderMenu2 li{
+        padding-right: 50px;
+    }
+    #xIcon{
+        height: 70px;
+        width: 70px;
     }
 }
