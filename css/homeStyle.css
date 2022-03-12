@@ -538,11 +538,15 @@ ul{
         cursor: pointer;
         overflow: hidden;
         height: 60px;
+        width: 100%;
+        padding: 15px;
     }
     #fixedRightMenu4{
         cursor: pointer;
         overflow: hidden;
         height: 60px;
+        width: 100%;
+        padding: 15px;
     }
     #fixedRightMenu1,#fixedRightMenu2,#fixedRightMenu5,#fixedRightMenu6,#fixedRightMenu7,#fixedRightMenu8,#fixedRightMenu9,#fixedRightMenu10{
         height: 60px;

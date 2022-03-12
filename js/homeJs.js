@@ -286,31 +286,35 @@ function closeMyMenu(){
     document.getElementById('fixedRightMenu').style.display = "none"
 }
 function showRightUnderMenu1(){
-    if(document.getElementById('fixedRightMenu3').style.height < '70px'){
+    if(document.getElementById('fixedRightMenu3').className == 'closed1'){
         document.getElementById('fixedRightMenu3').style.animationIterationCount = '1'
         document.getElementById('fixedRightMenu3').style.animation = 'openMenu1 1s'
         document.getElementById('fixedRightMenu3').style.animationFillMode = 'forwards'
         document.getElementById('topArrow1').style.transform = 'rotate(360deg)'
+        document.getElementById('fixedRightMenu3').className = document.getElementById('fixedRightMenu3').className.replace('closed1','opened1')
     }
-    else{
+    else if(document.getElementById('fixedRightMenu3').className == 'opened1'){
         document.getElementById('fixedRightMenu3').style.animationIterationCount = '1'
         document.getElementById('fixedRightMenu3').style.animation = 'closeMenu1 1s'
         document.getElementById('fixedRightMenu3').style.animationFillMode = 'forwards'       
         document.getElementById('topArrow1').style.transform = 'rotate(180deg)'
+        document.getElementById('fixedRightMenu3').className = document.getElementById('fixedRightMenu3').className.replace('opened1','closed1')
     }
 }
 function showRightUnderMenu2(){
-    if(document.getElementById('fixedRightMenu4').style.height < '70px'){
+    if(document.getElementById('fixedRightMenu4').className == 'closed2'){
         document.getElementById('fixedRightMenu4').style.animationIterationCount = '1'
         document.getElementById('fixedRightMenu4').style.animation = 'openMenu2 1s'
         document.getElementById('fixedRightMenu4').style.animationFillMode = 'forwards'
-        document.getElementById('topArrow1').style.transform = 'rotate(360deg)'
+        document.getElementById('topArrow2').style.transform = 'rotate(360deg)'
+        document.getElementById('fixedRightMenu4').className = document.getElementById('fixedRightMenu4').className.replace('closed2','opened2')
     }
-    else{
+    else if(document.getElementById('fixedRightMenu4').className == 'opened2'){
         document.getElementById('fixedRightMenu4').style.animationIterationCount = '1'
         document.getElementById('fixedRightMenu4').style.animation = 'closeMenu2 1s'
         document.getElementById('fixedRightMenu4').style.animationFillMode = 'forwards'       
-        document.getElementById('topArrow1').style.transform = 'rotate(180deg)'
+        document.getElementById('topArrow2').style.transform = 'rotate(180deg)'
+        document.getElementById('fixedRightMenu4').className = document.getElementById('fixedRightMenu4').className.replace('opened2','closed2')
     }
 }
 function closeFixedRightMenu(){
